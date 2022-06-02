@@ -113,6 +113,7 @@
 //     }
 // };
 
+
 // function lotto (){
 //     var rndNum = Math.floor(Math.random()*57)
 //     var userInputArr = []
@@ -159,36 +160,37 @@
 // loto1()
   
 
-var userNumbersArray = []
 
-function mainFunc (){
+// var userNumbersArray = []
+
+// function mainFunc (){
     
-    var lottoInpput = document.getElementById("user_input");
-    var numbersFromUser = document.getElementById("nums_user");
+//     var lottoInpput = document.getElementById("user_input");
+//     var numbersFromUser = document.getElementById("nums_user");
 
-    if(userNumbersArray.length <5){
-        numbersFromUser.innerText += "number : "+lottoInpput.value + "\n";
-        userNumbersArray.push(lottoInpput.value)
-    }
-    else{
-        lottoInpput.disabled = true;
-    }
-}
+//     if(userNumbersArray.length <5){
+//         numbersFromUser.innerText += "number : "+lottoInpput.value + "\n";
+//         userNumbersArray.push(lottoInpput.value)
+//     }
+//     else{
+//         lottoInpput.disabled = true;
+//     }
+// }
 
-function getAndPrintRandomNum (){
+// function getAndPrintRandomNum (){
 
-    var rndNum = Math.floor(Math.random() * 57);
-    var rndH3 = document.getElementById("rnd_h3");
-    rndH3.innerText += rndNum;
+//     var rndNum = Math.floor(Math.random() * 57);
+//     var rndH3 = document.getElementById("rnd_h3");
+//     rndH3.innerText += rndNum;
 
-    for(var i = 0; i<userNumbersArray.length; i++){
-        if(rndNum == userNumbersArray[i]){
-            document.getElementById("result_text").innerText = "you win"
-                return;
-        }    
-    }
-    document.getElementById("result_text").innerText = "you lose"
-}
+//     for(var i = 0; i<userNumbersArray.length; i++){
+//         if(rndNum == userNumbersArray[i]){
+//             document.getElementById("result_text").innerText = "you win"
+//                 return;
+//         }    
+//     }
+//     document.getElementById("result_text").innerText = "you lose"
+// }
 
 
 
