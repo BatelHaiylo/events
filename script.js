@@ -171,7 +171,7 @@ function mainFunc (){
         userNumbersArray.push(lottoInpput.value)
     }
     else{
-        alert("you cant enter more then 5 numbers")
+        lottoInpput.disabled = true;
     }
 }
 
@@ -187,6 +187,7 @@ function getAndPrintRandomNum (){
                 return;
         }    
     }
+    document.getElementById("result_text").innerText = "you lose"
 }
 
 
