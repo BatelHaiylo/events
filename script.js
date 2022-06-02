@@ -135,32 +135,59 @@
 // };
 // lotto ()
 
-function loto(){
-    var rndNum = Math.floor(Math.random()*57)
+// function loto1(){
+//     var rndNum = Math.floor(Math.random()*57)
 
-    var aButton = document.createElement("button")
-    document.body.append(aButton)
-    aButton.innerText = "send"
+//     var aButton = document.createElement("button")
+//     document.body.append(aButton)
+//     aButton.innerText = "send"
 
-    var rangeNum = document.createElement("ol")
-    document.body.append(rangeNum)
-    rangeNum.style.textDecoration = "none"
+//     var rangeNum = document.createElement("ol")
+//     document.body.append(rangeNum)
+//     rangeNum.style.textDecoration = "none"
 
 
-    for(var i = 0; i<5; i++){
-        var userNum =+ prompt("gusse a number between 0-56")
-            rangeNum.innerHTML +="<li>"+userNum+"</li>"
+//     for(var i = 0; i<5; i++){
+//         var userNum =+ prompt("gusse a number between 0-56")
+//             rangeNum.innerHTML +="<li>"+userNum+"</li>"
 
-            aButton.onclick = function(){
-                document.body.innerHTML = "<p>"+rndNum+"<p>"
-            }
+//             aButton.onclick = function(){
+//                 document.body.innerHTML = "<p>"+rndNum+"<p>"
+//             }
+//     }
+// }
+// loto1()
+  
+
+var userNumbersArray = []
+
+function mainFunc (){
+    
+    var lottoInpput = document.getElementById("user_input");
+    var numbersFromUser = document.getElementById("nums_user");
+
+    if(userNumbersArray.length <5){
+        numbersFromUser.innerText += "number : "+lottoInpput.value + "\n";
+        userNumbersArray.push(lottoInpput.value)
+    }
+    else{
+        alert("you cant enter more then 5 numbers")
     }
 }
-loto()
-    
 
+function getAndPrintRandomNum (){
 
+    var rndNum = Math.floor(Math.random() * 57);
+    var rndH3 = document.getElementById("rnd_h3");
+    rndH3.innerText += rndNum;
 
+    for(var i = 0; i<userNumbersArray.length; i++){
+        if(rndNum == userNumbersArray[i]){
+            document.getElementById("result_text").innerText = "you win"
+                return;
+        }    
+    }
+}
 
 
 
